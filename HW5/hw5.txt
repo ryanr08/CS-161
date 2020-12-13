@@ -1,0 +1,47 @@
+1.  a) neither: 
+	smoke:	 fire:	 (smoke => fire) => (!smoke => !fire) == !(!smoke v fire) v (smoke v !fire)
+	t	 f	  t
+	f	 t	  f
+	t	 t	  t
+	f	 f	  t
+    b) neither:
+	smoke:	 fire:	heat:	 (smoke => fire) => ((smoke v heat) => fire) == !(!smoke v fire) v (!(smoke v heat) v fire)
+	t	 f	t	  t
+	f	 t	f  	  t
+	t	 t	t	  t
+	f	 f	f	  t
+	t	 t	f	  t
+	f	 t	t	  t
+	t	 f	f	  f
+	f	 f	t	  f
+    c) valid:
+	smoke:	 fire:	heat:	 ((smoke ^ heat) => fire) <=> ((smoke => fire) v (heat => fire))
+	t	 f	t	  t
+	f	 t	f  	  t
+	t	 t	t	  t
+	f	 f	f	  t
+	t	 t	f	  t
+	f	 t	t	  t
+	t	 f	f	  t
+	f	 f	t	  t
+
+2. 
+    a) (mythical => immortal), (!mythical => mortal ^ mammal), (immortal v mammal => horned), (horned => magical)
+    b) (!mythical v immortal) ^ (mythical v mortal) ^ (mythical v mammal) ^ (!immortal v horned) ^ (!mammal v horned) ^ (!horned v magical)
+    c) You cannot prove that the unicorn is mythical, but you can prove that is is magical and horned:
+	If a unicorn is either immortal or a mammal, then it is horned. Additionally, if a unicorn is mythical it is immortal, otherwise it is mortal and a mammal.
+	Therefore, a unicorn is always either mortal and a mammal or immortal. Thus (immortal v mammal) is always true, meaning that horned is always true. And if horned is
+	true, then a unicorn is always magical since being horned implies being magical. 
+	
+3. P(oil) = 0.5
+   P(gas) = 0.2
+   P(!oil ^ !gas) = 0.3
+   P(oil ^ gas) = 0
+   P(test | oil) = 0.9
+   P(test | gas) = 0.3
+   P(test | !gas ^ !oil) = 0.1
+
+   P(oil | test) = P(test | oil) * P(oil) / p(test) 
+	P(test) = P(test | oil) * P(oil) + P(test | gas) * P(gas) + P(test | !gas ^ !oil) * P(!oil ^ !gas) = 0.54
+
+   P(oil | test) = P(test | oil) * P(oil) / p(test) = 0.9 * 0.5 / 0.54 = 0.833

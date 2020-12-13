@@ -1,0 +1,19 @@
+1. The instance of graph1 with only 3 colors is not satisfiable
+2. The insance of graph1 with 4 colors is satisfiable
+3. Since the problem is only solvable with 4 or more colors,
+   this tells us that the graph contains a node with degree 4.
+   That is, there are four nodes in the graph that need to be 
+   colored differently from each other, thus requiring 4 colors.
+
+A solution to the graph coloring problem of graph1 is the following:
+(using the colors: red, orange, green, purple)
+
+Node 1: Orange
+Node 2: Green
+Node 3: Orange
+Node 4: Purple
+Node 5: Red
+Node 6: Green
+Node 7: Red
+
+4. This graph problem (graph2.txt) requires at least 8 colors

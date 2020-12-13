@@ -1,0 +1,30 @@
+Question 1:
+ 
+ PAD 0: 1
+ PAD 1: 1
+ PAD 2: 1
+ PAD 3: 3
+ PAD 4: 5
+ PAD 5: 9
+ PAD 6: 17
+ PAD 7: 31
+ PAD 8: 57
+ PAD 9: 105
+ PAD 10: 193
+ PAD 30: 37895489
+
+I ran PAD 30 and the program took a very long time to complete (around 30 second). This is due to the fact that the PAD sequence gets exponentially more complicated the higher you go up since it is a recursively defined function. Thus, computing PAD 30 takes much more time than PAD 10 or PAD 20.
+
+Question 2:
+
+ SUMS 0: 0
+ SUMS 1: 0
+ SUMS 2: 0
+ SUMS 3: 2
+ SUMS 4: 4
+ SUMS 5: 8
+ SUMS 6: 16
+ SUMS 7: 30
+ SUMS 8: 56
+ SUMS 9: 104
+
